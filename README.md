@@ -1,2 +1,1 @@
-# memory-game
-Игра на развитие памяти
+https://EvgeKat.github.io/memory-game/
