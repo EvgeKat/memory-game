@@ -1,0 +1,163 @@
+html {
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(lightblue, pink);
+}
+
+main {
+  margin-bottom: 40px;
+}
+
+.winner-conteiner {
+  display: flex;
+  justify-content: center;
+}
+
+.winner {
+  position: absolute;
+  width: 40%;
+  text-align: center;
+  border: 3px solid teal;
+  margin: 20px 20px;
+  z-index: 1;
+  background: linear-gradient(pink, lightblue);
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.hidden {
+  display: none;
+}
+
+.button-game {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-radius: 40px;
+  height: 60px;
+  width: 60px;
+  border: 3px solid teal;
+  background: linear-gradient(pink, lightblue);
+}
+
+.reset-score {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  height: 60px;
+  width: 60px;
+  border: 3px solid teal;
+  background: linear-gradient(pink, lightblue);
+}
+
+header,
+footer {
+  background: teal;
+}
+
+h1 {
+  text-align: center;
+  height: 70px;
+  padding-top: 20px;
+}
+
+p {
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.memory-game {
+  width: 750px;
+  height: 750px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+  .memory-game {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .memory-card {
+    width: 70px !important;
+  }
+
+  .front-face,
+  .back-face {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}
+
+.memory-card {
+  width: 100px;
+  margin: 40px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: teal;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+  padding: 0 10px;
+}
+
+.footer-list {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+}
+
+.icon {
+  width: 30px;
+}
+
+.rs {
+  width: 80px;
+  padding-left: 30px;
+}
